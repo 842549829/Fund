@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A635189-D35E-4964-B227-8159DBAC693F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AliPay</RootNamespace>
+    <AssemblyName>AliPay</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core.cs" />
+    <Compile Include="CreateRequest.cs" />
+    <Compile Include="ErrorCodeTranslation\DistributeErrorCode.cs" />
+    <Compile Include="ErrorCodeTranslation\SystemErrorCode.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="Md5.cs" />
+    <Compile Include="Model\AccountPageQueryResut.cs" />
+    <Compile Include="Model\AliPayBaseInfo.cs" />
+    <Compile Include="Model\AlipayTradeQueryInfo.cs" />
+    <Compile Include="Model\AlipayTradeQueryResult.cs" />
+    <Compile Include="Model\BillInfo.cs" />
+    <Compile Include="Model\Config.cs" />
+    <Compile Include="Model\ConfigRequest.cs" />
+    <Compile Include="Model\DirectInfo.cs" />
+    <Compile Include="Model\FundTransOrderQueryInfo.cs" />
+    <Compile Include="Model\FundTransOrderQueryResult.cs" />
+    <Compile Include="Model\FundTransToaccountTransferInfo.cs" />
+    <Compile Include="Model\FundTransToaccountTransferInfoResult.cs" />
+    <Compile Include="Model\OpenidAndAccessTokenUrlInfo.cs" />
+    <Compile Include="Model\OpenidFromCodeRequestInfo.cs" />
+    <Compile Include="Model\OriginalDetails.cs" />
+    <Compile Include="Model\RefundPayRequest.cs" />
+    <Compile Include="Model\RefundQueryRequest.cs" />
+    <Compile Include="Model\RefundQueryResult.cs" />
+    <Compile Include="Model\RefundRequest.cs" />
+    <Compile Include="Model\RefundResult.cs" />
+    <Compile Include="Model\RefundResultDetails.cs" />
+    <Compile Include="Model\RefundShareDetail.cs" />
+    <Compile Include="Model\RefundShareRequest.cs" />
+    <Compile Include="Notify.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SdkPay\AlipayConstants.cs" />
+    <Compile Include="SdkPay\AopDictionary.cs" />
+    <Compile Include="SdkPay\AopException.cs" />
+    <Compile Include="SdkPay\AopObject.cs" />
+    <Compile Include="SdkPay\AopResponse.cs" />
+    <Compile Include="SdkPay\Config.cs" />
+    <Compile Include="SdkPay\DefaultAopClient.cs" />
+    <Compile Include="SdkPay\Domain\AlipayFundTransOrderQueryModel.cs" />
+    <Compile Include="SdkPay\Domain\AlipayFundTransToaccountTransferModel.cs" />
+    <Compile Include="SdkPay\Domain\AlipayTradeAppPayModel.cs" />
+    <Compile Include="SdkPay\Domain\AlipayTradeAppPayQueryModel.cs" />
+    <Compile Include="SdkPay\Domain\ExtendParams.cs" />
+    <Compile Include="SdkPay\Domain\RoyaltyDetailInfos.cs" />
+    <Compile Include="SdkPay\Domain\RoyaltyInfo.cs" />
+    <Compile Include="SdkPay\Domain\TradeFundBill.cs" />
+    <Compile Include="SdkPay\Domain\VoucherDetail.cs" />
+    <Compile Include="SdkPay\IAopClient.cs" />
+    <Compile Include="SdkPay\IAopRequest.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\BooleanObject.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Collections\KeyedCollection.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Compat.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Configuration\DictionarySectionHandler.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Configuration\ListSectionHandler.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Configuration\TypeListSectionHandler.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Diagnostics\DebugString.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\IndentedTextWriter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\InternetDate.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\BufferedCharReader.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\AnyType.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\AnyImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ArrayImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\BooleanExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\BooleanImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ByteArrayExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ByteArrayImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ComponentExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ComponentImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DataRowExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DataRowViewExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DataSetExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DataTableExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DataViewExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DateTimeExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DateTimeImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DictionaryExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\DictionaryImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\EnumerableExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\EnumImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ExportAwareExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ExporterBase.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\GuidImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ImportAwareImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ImporterBase.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\ListImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\NameValueCollectionExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\NameValueCollectionImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\NumberExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\NumberImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\StringExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\Converters\StringImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\CustomTypeDescriptor.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ExportContext.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ExporterCollection.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ExporterListSectionHandler.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\IExporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\IImporter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\IJsonExportable.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\IJsonImportable.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ImportContext.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ImporterCollection.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\ImporterListSectionHandler.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\JsonConvert.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\Conversion\JsonIgnoreAttribute.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\EmptyJsonWriter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\InvalidMemberException.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonArray.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonBoolean.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonException.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonNull.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonNumber.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonObject.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonReader.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonReaderBase.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonRecorder.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonString.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonTextReader.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonTextWriter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonToken.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonTokenClass.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonWriter.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonWriterBase.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\Json\JsonWriterBracket.cs" />
+    <Compile Include="SdkPay\Jayrock\Json\UnixTime.cs" />
+    <Compile Include="SdkPay\Jayrock\Mask.cs" />
+    <Compile Include="SdkPay\Parser\AopAttribute.cs" />
+    <Compile Include="SdkPay\Parser\AopJsonParser.cs" />
+    <Compile Include="SdkPay\Parser\AopJsonReader.cs" />
+    <Compile Include="SdkPay\Parser\AopModelParser.cs" />
+    <Compile Include="SdkPay\Parser\AopXmlParser.cs" />
+    <Compile Include="SdkPay\Parser\EncryptParseItem.cs" />
+    <Compile Include="SdkPay\Parser\IAopParser.cs" />
+    <Compile Include="SdkPay\Parser\IAopReader.cs" />
+    <Compile Include="SdkPay\Request\AlipayFundTransOrderQueryRequest.cs" />
+    <Compile Include="SdkPay\Request\AlipayFundTransToaccountTransferRequest.cs" />
+    <Compile Include="SdkPay\Request\AlipaySystemOauthTokenRequest.cs" />
+    <Compile Include="SdkPay\Request\AlipayTradeAppPayRequest.cs" />
+    <Compile Include="SdkPay\Request\AlipayTradeQueryRequest.cs" />
+    <Compile Include="SdkPay\Request\IAopUploadRequest.cs" />
+    <Compile Include="SdkPay\ResponseParseItem.cs" />
+    <Compile Include="SdkPay\Response\AlipayFundTransOrderQueryResponse.cs" />
+    <Compile Include="SdkPay\Response\AlipayFundTransToaccountTransferResponse.cs" />
+    <Compile Include="SdkPay\Response\AlipaySystemOauthTokenResponse.cs" />
+    <Compile Include="SdkPay\Response\AlipayTradeAppPayResponse.cs" />
+    <Compile Include="SdkPay\Response\AlipayTradeQueryResponse.cs" />
+    <Compile Include="SdkPay\Response\QueryPayTrade.cs" />
+    <Compile Include="SdkPay\SignItem.cs" />
+    <Compile Include="SdkPay\Util\AlipayEncrypt.cs" />
+    <Compile Include="SdkPay\Util\AlipaySignature.cs" />
+    <Compile Include="SdkPay\Util\AopUtils.cs" />
+    <Compile Include="SdkPay\Util\FileItem.cs" />
+    <Compile Include="SdkPay\Util\RSACryptoServiceProviderExtension.cs" />
+    <Compile Include="SdkPay\Util\WebUtils.cs" />
+    <Compile Include="Submit.cs" />
+    <Compile Include="Translation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

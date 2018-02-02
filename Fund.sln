@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixin", "Weixin\Weixin.csproj", "{B3D42478-0A55-4E8D-B280-FEDE7395D436}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliPay", "AliPay\AliPay.csproj", "{5A635189-D35E-4964-B227-8159DBAC693F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notify", "Notify\Notify.csproj", "{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "支付", "支付", "{D73CF4A5-9BDD-4989-B3D4-53D34056AC3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3D42478-0A55-4E8D-B280-FEDE7395D436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D42478-0A55-4E8D-B280-FEDE7395D436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D42478-0A55-4E8D-B280-FEDE7395D436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D42478-0A55-4E8D-B280-FEDE7395D436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A635189-D35E-4964-B227-8159DBAC693F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A635189-D35E-4964-B227-8159DBAC693F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A635189-D35E-4964-B227-8159DBAC693F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A635189-D35E-4964-B227-8159DBAC693F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3D42478-0A55-4E8D-B280-FEDE7395D436} = {D73CF4A5-9BDD-4989-B3D4-53D34056AC3F}
+		{5A635189-D35E-4964-B227-8159DBAC693F} = {D73CF4A5-9BDD-4989-B3D4-53D34056AC3F}
+		{A023E7D0-ADE0-41C8-9619-6CDDBDEC7345} = {D73CF4A5-9BDD-4989-B3D4-53D34056AC3F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6534F73-9786-4BA5-83D8-EC08C2453473}
+	EndGlobalSection
+EndGlobal
